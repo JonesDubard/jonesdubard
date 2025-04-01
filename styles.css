@@ -123,3 +123,12 @@ nav {
         align-items: center;
     }
 }
+
+.high-contrast {
+    background-color: #000;
+    color: #FFF;
+}
+
+.high-contrast .nav-links li a {
+    color: #FFD700;
+}
