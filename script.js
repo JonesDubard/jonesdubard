@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("about-link").textContent = translations[lang].about;
         document.getElementById("work-link").textContent = translations[lang].work;
         document.getElementById("typing-text").textContent = translations[lang].introText;
+        document.getElementById("intro-text").textContent = translations[lang].introText;
         document.getElementById("work-title").textContent = translations[lang].workTitle;
         document.getElementById("work-text").textContent = translations[lang].workText;
         document.getElementById("skills-title").textContent = translations[lang].skillsTitle;
@@ -70,6 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
         switchLanguage(event.target.value);
     });
 
-    // Ensure default language is set
+    // Set initial language based on selection
     switchLanguage(languageSwitcher.value);
 });
