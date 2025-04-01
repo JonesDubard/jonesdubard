@@ -109,6 +109,13 @@ nav {
     left: 10px;
 }
 
+#language-switcher {
+    font-size: 16px;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+
 /* Mobile View Navigation */
 @media (max-width: 768px) {
     nav {
