@@ -22,29 +22,51 @@ document.getElementById("contrast-toggle").addEventListener("click", function() 
 });
 
 // Language Translations
-const translations = {
-    en: {
-        welcome: "Welcome to My Portfolio",
-        about: "About Me",
-        projects: "Projects",
-        contact: "Contact",
-        downloadCV: "Download CV"
-    },
-    de: {
-        welcome: "Willkommen in meinem Portfolio",
-        about: "Über mich",
-        projects: "Projekte",
-        contact: "Kontakt",
-        downloadCV: "Lebenslauf herunterladen"
-    }
-};
+document.addEventListener("DOMContentLoaded", () => {
+    const languageSwitcher = document.getElementById("language-switcher");
 
-// Language Switcher
-document.getElementById("language-switcher").addEventListener("change", function() {
-    const lang = this.value;
-    document.getElementById("welcome-text").innerText = translations[lang].welcome;
-    document.getElementById("about-link").innerText = translations[lang].about;
-    document.getElementById("projects-link").innerText = translations[lang].projects;
-    document.getElementById("contact-link").innerText = translations[lang].contact;
-    document.getElementById("downloadCV").innerText = translations[lang].downloadCV;
+    const translations = {
+        en: {
+            home: "Home",
+            about: "About",
+            work: "Work",
+            skills: "Skills",
+            contact: "Contact",
+            introText: "I am a Front-End UX Engineer passionate about designing and building intuitive digital health solutions. I blend UX design with front-end development. Here, you will find some design projects and case studies. Let's connect!",
+            workTitle: "Work",
+            workText: "Some of my featured projects.",
+            skillsTitle: "Skills",
+            contactTitle: "Contact",
+            contactText: "Feel free to reach out!"
+        },
+        de: {
+            home: "Startseite",
+            about: "Über mich",
+            work: "Arbeit",
+            skills: "Fähigkeiten",
+            contact: "Kontakt",
+            introText: "Ich bin ein Front-End UX-Ingenieur, der sich leidenschaftlich für die Gestaltung und Entwicklung intuitiver digitaler Gesundheitslösungen einsetzt. Ich kombiniere UX-Design mit Front-End-Entwicklung. Hier finden Sie einige Designprojekte und Fallstudien. Lassen Sie uns verbinden!",
+            workTitle: "Arbeit",
+            workText: "Einige meiner vorgestellten Projekte.",
+            skillsTitle: "Fähigkeiten",
+            contactTitle: "Kontakt",
+            contactText: "Zögern Sie nicht, mich zu kontaktieren!"
+        }
+    };
+
+    function switchLanguage(lang) {
+        document.getElementById("home-link").textContent = translations[lang].home;
+        document.getElementById("about-link").textContent = translations[lang].about;
+        document.getElementById("work-link").textContent = translations[lang].work;
+        document.getElementById("typing-text").textContent = translations[lang].introText;
+        document.getElementById("work-title").textContent = translations[lang].workTitle;
+        document.getElementById("work-text").textContent = translations[lang].workText;
+        document.getElementById("skills-title").textContent = translations[lang].skillsTitle;
+        document.getElementById("contact-title").textContent = translations[lang].contactTitle;
+        document.getElementById("contact-text").textContent = translations[lang].contactText;
+    }
+
+    languageSwitcher.addEventListener("change", (event) => {
+        switchLanguage(event.target.value);
+    });
 });
