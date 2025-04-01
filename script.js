@@ -69,4 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     languageSwitcher.addEventListener("change", (event) => {
         switchLanguage(event.target.value);
     });
+
+    // Ensure default language is set
+    switchLanguage(languageSwitcher.value);
 });
