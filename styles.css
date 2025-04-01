@@ -139,33 +139,3 @@ nav {
 .high-contrast .nav-links li a {
     color: #FFD700;
 }
-
-.language-container {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background-color: #fff;
-    border: 2px solid #000;
-    padding: 5px 10px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-#language-switcher {
-    font-size: 14px;
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
-#language-switcher:hover {
-    background-color: #f0f0f0;
-}
-
-/* Improves visibility */
-#language-switcher option {
-    background: #fff;
-    color: #000;
-}
-
