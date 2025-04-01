@@ -21,7 +21,7 @@ document.getElementById("contrast-toggle").addEventListener("click", function() 
     document.body.classList.toggle("high-contrast");
 });
 
-// Language Switcher
+// Language Translations
 const translations = {
     en: {
         welcome: "Welcome to My Portfolio",
@@ -39,6 +39,7 @@ const translations = {
     }
 };
 
+// Language Switcher
 document.getElementById("language-switcher").addEventListener("change", function() {
     const lang = this.value;
     document.getElementById("welcome-text").innerText = translations[lang].welcome;
