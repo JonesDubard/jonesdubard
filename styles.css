@@ -4,23 +4,16 @@
   margin-bottom: 80px;
 }
 
-.introducao {
-  max-width: 100%;
-  overflow-wrap: break-word;
-}
-
 .introducao h1 {
-  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-size: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.05rem;
   margin-top: 40px;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 .container-typewriter {
   display: inline-block;
-  max-width: 100%;
 }
 
 @keyframes typing {
@@ -34,27 +27,22 @@
 }
 
 .typed-out {
-  overflow: hidden;
-  border-right: .15em solid rgb(0, 0, 0);
-  font-size: clamp(1.2rem, 3vw, 1.6rem);
-  white-space: nowrap;
-  width: 0;
-  max-width: 100%;
-  display: inline-block;
-  animation: typing 1s steps(20, end) forwards,
-              blink .8s infinite;
+    overflow: hidden;
+    border-right: .15em solid rgb(0, 0, 0);
+    font-size: 1.6rem;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 1s steps(20, end) forwards,
+                blink .8s infinite;
 }
 
 .introducao h2 {
-  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  font-size: 1.1rem;
   font-weight: 300;
   letter-spacing: 0.05rem;
   line-height: 2.5rem;
   margin-bottom: 20px;
-  max-width: 90%;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  text-align: center;
+  max-width: 800px;
 }
 
 .introducao a {
@@ -63,8 +51,9 @@
 }
 
 .introducao a:hover {
-  background-color: #FFA5CF;
+  background-color: #FFA5CF;;
 }
+
 
 /* projects */
 
@@ -73,11 +62,10 @@
 }
 
 .projects h2 {
-  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  font-size: 1.3rem;
   font-weight: 500;
   letter-spacing: 0.05rem;
   margin-bottom: 10px;
-  text-align: center;
 }
 
 .projects-links {
@@ -87,9 +75,8 @@
   gap: 20px;
   align-items: center;
   justify-content: center;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
+
 
 .projects-links img, .projects-links a {
   border-radius: 4px;
@@ -99,6 +86,7 @@
   box-shadow: 2px 1px 5px 2px rgb(213, 213, 213);
 }
 
+
 /* skills/toolkit */
 
 .toolkit-bg {
@@ -106,22 +94,19 @@
 }
 
 .toolkit h2 {
-  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  font-size: 1.3rem;
   font-weight: 500;
   letter-spacing: 0.05rem;
   margin-top: 40px;
   margin-bottom: 10px;
-  text-align: center;
 }
 
 .toolkit ul {
-  max-width: 100%;
+  max-width: 900px;
+  /* padding: 0 20px; */
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 10px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .toolkit li {
@@ -133,6 +118,7 @@
   flex-direction: column;
   gap: 10px;
   border: 2px solid #fff;
+  
 }
 
 .toolkit img {
@@ -152,39 +138,52 @@
   .toolkit ul {
     grid-template-columns: repeat(4, 1fr);
   }
-  .toolkit li:nth-last-child(2),
+
+  .toolkit li:nth-last-child(2) {
+    grid-column: 2;
+  }
   .toolkit li:nth-last-child(1) {
-    grid-column: auto;
+    grid-column: 3;
   }
 }
 
 @media (max-width: 580px) {
+
   .toolkit ul {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .toolkit li {
     padding: 15px;
   }
+
   .toolkit li:nth-last-child(2) {
     grid-column: 3;
   }
   .toolkit li:nth-last-child(1) {
     grid-column: 2;
   }
-  .toolkit-itens img {
+
+  .toolkit-itens img{
     transform: scale(0.8);
   }
+
   .toolkit-itens li {
     font-size: 1rem;
     padding: 10px;
   }
+
 }
 
 @media (max-width: 400px) {
+
   .toolkit ul {
     grid-template-columns: repeat(2, 1fr);
   }
-  .toolkit li:nth-last-child(2),
+
+  .toolkit li:nth-last-child(2) {
+    grid-column: auto;
+  }
   .toolkit li:nth-last-child(1) {
     grid-column: auto;
   }
