@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const text = "Hello, welcome to my website!";
+    const text = "Hello, I am Dubard!";
     const typingText = document.getElementById('typing-text');
 
     let i = 0;
