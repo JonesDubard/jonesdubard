@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/jonesdubard/static/css/main.b1ec63fe.css",
+    "main.js": "/jonesdubard/static/js/main.6cc6f3a2.js",
+    "index.html": "/jonesdubard/index.html",
+    "main.b1ec63fe.css.map": "/jonesdubard/static/css/main.b1ec63fe.css.map",
+    "main.6cc6f3a2.js.map": "/jonesdubard/static/js/main.6cc6f3a2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b1ec63fe.css",
+    "static/js/main.6cc6f3a2.js"
+  ]
+}
